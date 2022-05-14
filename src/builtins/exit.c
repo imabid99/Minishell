@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 15:30:47 by obeaj             #+#    #+#             */
-/*   Updated: 2022/05/08 20:08:40 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/05/13 16:37:40 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	check_num(char **args)
 		{
 			print_error_("exit: ", args[1],
 				": numeric argument required\n");
-			exit_err(args[i]);
+			exit_err(args[0]);
 		}
 		i++;
 	}

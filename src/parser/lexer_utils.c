@@ -6,7 +6,7 @@
 /*   By: obeaj <obeaj@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 02:54:13 by obeaj             #+#    #+#             */
-/*   Updated: 2022/04/22 14:32:00 by obeaj            ###   ########.fr       */
+/*   Updated: 2022/05/11 20:26:24 by obeaj            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_token	**concat_words_utils(t_token **tokens, t_token *token)
 	while (sec -> tok & STR)
 	{
 		token -> data = ft_strjoin(token -> data, sec -> data);
+		gc_add_back(new_gcnode((void *)token->data));
 		sec = sec -> next;
 	}
 	return (tokens);
